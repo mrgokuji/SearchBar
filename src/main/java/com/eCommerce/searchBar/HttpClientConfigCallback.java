@@ -1,8 +1,9 @@
 package com.eCommerce.searchBar;
 
 import org.apache.http.impl.nio.client.HttpAsyncClientBuilder;
+import org.elasticsearch.client.RestClientBuilder;
 
-public interface HttpClientConfigCallback {
+public interface HttpClientConfigCallback extends RestClientBuilder.HttpClientConfigCallback {
     /**
      * Allows to customize the {@link CloseableHttpAsyncClient} being created and used by the {@link RestClient}.
      * Commonly used to customize the default {@link org.apache.http.client.CredentialsProvider} for authentication
